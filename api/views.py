@@ -20,7 +20,7 @@ class newsApi(APIView):
         news = News.objects.all()
         try:
             if len(news) > 3:
-                data = news[3:]
+                data = news[:3]
             else:
                 data = news
             data.reverse()
@@ -37,7 +37,7 @@ class latestNewsApi(APIView):
         news = News.objects.all()
         try:
             if len(news) > 3:
-                data = news[:3]
+                data = news[3:]
             else:
                 data = news
             data.reverse()
