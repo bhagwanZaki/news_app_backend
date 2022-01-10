@@ -1,0 +1,1 @@
+web: gunicorn aiktc_news_backend.wsgi --log-file -
